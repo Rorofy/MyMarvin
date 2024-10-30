@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  my_marvin:
+    expose:
+      - 8080
+    restart: "on-failure"
+    build: .
+    ports:
+      - "7000:8080"
+    environment:
+      - "USER_CHOCOLATEEN_PASSWORD=admin"
